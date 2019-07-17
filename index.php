@@ -2,6 +2,9 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+/*
+ * Below example. You can use it as you wish
+ */
 const SEATS_NUMBER = 50;
 
 $logger = new \App\FileLogger();

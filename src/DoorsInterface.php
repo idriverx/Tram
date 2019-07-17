@@ -9,4 +9,8 @@ interface DoorsInterface
     public function close();
 
     public function isDoorsAreOpen();
+
+    public function openOnlyOneDoor(int $numberDoorToOpen);
+
+    public function closeOnlyOneDoor(int $numberDoorToOpen);
 }
