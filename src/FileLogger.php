@@ -4,7 +4,8 @@ namespace App;
 
 class FileLogger implements LoggerInterface
 {
-    const FILE_PATH = '/logs/tram.log';
+    const FILE_PATH_PART = '/logs/tram';
+    const EXTENSION = '.log';
 
     /**
      * @param string $message
@@ -24,7 +25,7 @@ class FileLogger implements LoggerInterface
      */
     private function getFilePath()
     {
-        return dirname(__DIR__, 1) . self::FILE_PATH;
+        return dirname(__DIR__, 1) . self::FILE_PATH_PART . date("Y_m_d_h_i_s") . self::EXTENSION;
     }
 
     /**

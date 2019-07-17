@@ -27,7 +27,7 @@ $alexandraPassenger->boardIntoTram($tram);
 $valeriyaPassenger->boardIntoTram($tram);
 $tram->getDoors()->close();
 $tram->goNextStop();
-$tram->getDoors()->openOnlyOneDoor(2);
+$tram->getDoors()->openOnlyOneDoor(\App\DoorsInterface::MIDDLE_DOOR);
 $alexandraPassenger->wentFromTram($tram);
 $tram->getDoors()->close();
 $tram->goNextStop();
@@ -40,3 +40,5 @@ $denisPassenger->wentFromTram($tram);
 $valeriyaPassenger->wentFromTram($tram);
 $tram->getDoors()->close();
 $tram->stopEngine();
+
+echo 'Now check logs/ folder. Thanks :)';

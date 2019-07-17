@@ -4,6 +4,10 @@ namespace App;
 
 interface DoorsInterface
 {
+    const FRONT_DOOR    = 1;
+    const MIDDLE_DOOR   = 2;
+    const BACK_DOOR     = 3;
+
     public function open();
 
     public function close();
