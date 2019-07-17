@@ -3,7 +3,7 @@
 
 class EngineTest extends \PHPUnit\Framework\TestCase
 {
-    public function testIsCanEnableWhenDisabled()
+    public function testIsCanEnableWhenDisabledEngine()
     {
         $engine = new \App\Engine(new \App\FileLogger());
         $this->assertTrue($engine->on());

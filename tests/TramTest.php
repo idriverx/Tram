@@ -63,7 +63,7 @@ class TramTest extends \PHPUnit\Framework\TestCase
     {
         $this->expectException(Exception::class);
         $logger = new \App\FileLogger();
-        $tram = new \App\Tram(
+        new \App\Tram(
             "Igor Volokitin",
             new \App\Engine($logger),
             new \App\Doors($logger),
@@ -87,5 +87,4 @@ class TramTest extends \PHPUnit\Framework\TestCase
             'D44'
         );
     }
-
 }

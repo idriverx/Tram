@@ -47,7 +47,8 @@ class Doors implements DoorsInterface
      */
     public function openOnlyOneDoor(int $numberDoorToOpen)
     {
-        if ($this->isDoorNumberCorrect($numberDoorToOpen)) {
+        if ($this->isDoorNumberCorrect($numberDoorToOpen) && !$this->isDoorsAreOpen()) {
+            $this->doorsAreOpen = true;
             $this->logger->log("Door $numberDoorToOpen is open");
         } else {
             throw new \Exception("Tram contains only " . self::DOORS_COUNT . ' doors');
@@ -60,7 +61,8 @@ class Doors implements DoorsInterface
      */
     public function closeOnlyOneDoor(int $numberDoorToOpen)
     {
-        if ($this->isDoorNumberCorrect($numberDoorToOpen)) {
+        if ($this->isDoorNumberCorrect($numberDoorToOpen) && $this->isDoorsAreOpen()) {
+            $this->doorsAreOpen = false;
             $this->logger->log("Door $numberDoorToOpen is closed");
         } else {
             throw new \Exception("Tram contains only " . self::DOORS_COUNT . ' doors');

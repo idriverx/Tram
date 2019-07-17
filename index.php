@@ -24,7 +24,7 @@ $alexandraPassenger->boardIntoTram($tram);
 $valeriyaPassenger->boardIntoTram($tram);
 $tram->getDoors()->close();
 $tram->goNextStop();
-$tram->getDoors()->open();
+$tram->getDoors()->openOnlyOneDoor(2);
 $alexandraPassenger->wentFromTram($tram);
 $tram->getDoors()->close();
 $tram->goNextStop();
